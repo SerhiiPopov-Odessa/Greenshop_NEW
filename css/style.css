@@ -1,7 +1,171 @@
 * {
     box-sizing: border-box;
 }
+/* ////////////////////////////////////////////// */
+/* :root {
+  --font-family: "Cera Pro", sans-serif;
+  --second-family: "Hanging Letters", sans-serif;
+} */
+/* Cera Pro Regular
+39
+Cera Pro Bold
+33
+Cera Pro Medium
+14
+Cera Pro Black
+3
+Cera Pro Light
+3
+Hanging Letters Regular */
+.d-flex{
+    display: flex;
+}
+.align-items{
+    align-items: center;
+}
+.justify-content{
+    justify-content: center;
+}
+.justify-content_sp-bn{
+    justify-content: space-between;
+}
+/* //////////////////////    section-header    //////////////////////////////////////////////////////////////// */
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+header
+{
+    padding-top:25px;
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li{
+    display:inline-block;
+    /* display:inline; */
+    /* Основное отличие данного свойства по сравнению с display: inline заключается в том, что inline-block позволяет установить ширину и высоту элемента. Кроме того, свойство display: inline не учитывает верхние и нижние поля и отступы, в то время как display: inline-block учитывает их. */
+    margin-right: 50px;
+}
+header nav li:last-child{
+    margin-right: 0px;
+}
+header nav li a{
+    /* font-family: var(--font-family); */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: #3d3d3d;
+}
+.section-header{
+    border-bottom: 0.30px solid rgba(70, 163, 88, 0.5);
+    margin-bottom: 12px;
+    min-height: 53px;
+}
+.section-header__login  {
+    /* font-family: var(--font-family); */
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    gap:4px;
+    border-radius: 6px;
+    background: #46a358;
+    padding: 8px 17px;
+}
+/* //////////////////////    section-main-banner    //////////////////////////////////////////////////////////////// */
+.section-main-banner{
+    background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
+}
+.section-main-banner__left-text{
+    padding: 68px 0 0 43px;
+}
+.section-main-banner__h3{
+    /* font-family: var(--font-family); */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 7px;
+}
+.section-main-banner__h1{
+    /* font-family: var(--font-family); */
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 5px;
+}
+.section-main-banner__span{
+    /* font-family: var(--font-family); */
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #46a358;
+}
+.section-main-banner__p{
+    /* font-family: var(--font-family); */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #727272;
+    margin-bottom: 44px;
+}
+.section-main-banner__shop-now{
+    /* font-family: var(--font-family); */
+    display: inline;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 6px;
+    background: #46a358;
+    text-decoration: none;
+    margin-bottom: 85px;
+    padding: 10px 27px;
+}
 
+
+
+
+
+
+   /*  background-image: url(../img/banner-right-picture.png);
+    /* background-position: center;
+    background-size: cover; */
+   /*  background-position: center;
+    background-size: cover;
+    position: relative;  */
+    /* background: url(../img/banner-right-picture.png) no-repeat fixed; */
+   /*  background: url(../img/banner-right-picture.png) no-repeat;
+    max-width: 518px;
+    min-height: 470px; */
+   /*  background-size: cover;
+    background-position: center; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////// registration ////////////////////////*/
 .registration-container {
     max-width: 500px;
     border: solid 1px silver;
@@ -9,7 +173,6 @@
     padding: 52px 100px 50px;
     border-bottom: solid 10px #46a358;
 }
-
 .registration-container__h1 {
     text-align: center;
     font-weight: 500;
@@ -18,11 +181,9 @@
     color: #3d3d3d;
     margin-bottom: 40px;
 }
-
 .registration-container__h1-span {
     color: #46a358;
 }
-
 .registration-container__text-help {
     font-weight: 400;
     font-size: 13px;
