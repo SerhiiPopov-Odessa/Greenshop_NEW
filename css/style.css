@@ -1,22 +1,75 @@
 * {
     box-sizing: border-box;
 }
-/* ////////////////////////////////////////////// */
-/* :root {
+/* ////////////////////          FONTS                   ////////////////////////// */
+:root {
   --font-family: "Cera Pro", sans-serif;
   --second-family: "Hanging Letters", sans-serif;
-} */
-/* Cera Pro Regular
-39
-Cera Pro Bold
-33
-Cera Pro Medium
-14
-Cera Pro Black
-3
-Cera Pro Light
-3
-Hanging Letters Regular */
+}
+@font-face {
+    font-family: 'hanging_lettersregular';
+    src: url('../fonts/hanged_letters-webfont.eot');
+    src: url('../fonts/hanged_letters-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hanged_letters-webfont.woff2') format('woff2'),
+         url('../fonts/hanged_letters-webfont.woff') format('woff'),
+         url('../fonts/hanged_letters-webfont.ttf') format('truetype'),
+         url('../fonts/hanged_letters-webfont.svg#hanging_lettersregular') format('svg');
+    font-weight: normal; /* regular,400 */
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.eot');
+    src: local('Cera Pro Regular'), local('CeraPro-Regular'),
+        url('../fonts/CeraPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Regular.woff') format('woff'),
+        url('../fonts/CeraPro-Regular.ttf') format('truetype');
+    font-weight: 400; /* normal,regular,400 */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.eot');
+    src: local('Cera Pro Bold'), local('CeraPro-Bold'),
+        url('../fonts/CeraPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Bold.woff') format('woff'),
+        url('../fonts/CeraPro-Bold.ttf') format('truetype');
+    font-weight: 700;/* bold */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Medium.eot');
+    src: local('Cera Pro Medium'), local('CeraPro-Medium'),
+        url('../fonts/CeraPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Medium.woff') format('woff'),
+        url('../fonts/CeraPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Black.eot');
+    src: local('Cera Pro Black'), local('CeraPro-Black'),
+        url('../fonts/CeraPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Black.woff') format('woff'),
+        url('../fonts/CeraPro-Black.ttf') format('truetype');
+    font-weight: 900;/* black */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Light.eot');
+    src: local('Cera Pro Light'), local('CeraPro-Light'),
+        url('../fonts/CeraPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CeraPro-Light.woff') format('woff'),
+        url('../fonts/CeraPro-Light.ttf') format('truetype');
+    font-weight: 300;/* Light */
+    font-style: normal;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .d-flex{
     display: flex;
 }
@@ -44,14 +97,24 @@ header nav ul{
 header nav ul li{
     display:inline-block;
     /* display:inline; */
-    /* Основное отличие данного свойства по сравнению с display: inline заключается в том, что inline-block позволяет установить ширину и высоту элемента. Кроме того, свойство display: inline не учитывает верхние и нижние поля и отступы, в то время как display: inline-block учитывает их. */
+    /* Основное отличие данного свойства по сравнению с display: inline заключается в том, что inline-block позволяет 
+    установить ширину и высоту элемента. Кроме того, свойство display: inline не учитывает верхние и нижние поля и отступы, 
+    в то время как display: inline-block учитывает их. */
     margin-right: 50px;
 }
 header nav li:last-child{
     margin-right: 0px;
 }
+header nav ul li:hover::after{
+    display: block;
+    width: 100%;
+    height: 0px;
+    border: 3px solid #46a358;
+    content: "";
+
+}
 header nav li a{
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
@@ -63,7 +126,7 @@ header nav li a{
     min-height: 53px;
 }
 .section-header__login  {
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
     font-weight: 500;
     font-size: 16px;
     color: #fff;
@@ -76,12 +139,13 @@ header nav li a{
 /* //////////////////////    section-main-banner    //////////////////////////////////////////////////////////////// */
 .section-main-banner{
     background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
+    margin-bottom: 26px;
 }
 .section-main-banner__left-text{
      padding: 68px 0 0 43px; 
 }
 .section-main-banner__h3{
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
@@ -91,7 +155,8 @@ header nav li a{
     margin-bottom: 7px;
 }
 .section-main-banner__h1{
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
+    font-family: 'Cera Pro';
     font-weight: 900;
     font-size: 70px;
     line-height: 100%;
@@ -100,7 +165,7 @@ header nav li a{
     margin-bottom: 5px;
 }
 .section-main-banner__span{
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
     font-weight: 900;
     font-size: 70px;
     line-height: 100%;
@@ -108,7 +173,7 @@ header nav li a{
     color: #46a358;
 }
 .section-main-banner__p{
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
     font-weight: 400;
     font-size: 14px;
     line-height: 171%;
@@ -116,7 +181,7 @@ header nav li a{
     margin-bottom: 44px;
 }
 .section-main-banner__shop-now{
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family, sans-serif);
     display: inline;
     font-weight: 700;
     font-size: 16px;
@@ -128,6 +193,67 @@ header nav li a{
     text-decoration: none;
     margin-bottom: 85px;
     padding: 10px 27px;
+}
+/* //////////////////////    section-product    //////////////////////////////////////////////////////////////// */
+
+.section-product__categories{
+    max-width: 310px;
+    /* min-height: 774px; */
+    background: #fbfbfb;
+    padding: 14px 24px 19px 18px;
+}
+.section-product__categories h2{
+    font-family: var(--font-family, sans-serif);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+}
+.section-product__categories li a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 267%;
+    color: #3d3d3d;
+    text-decoration: none;
+}
+.section-product__categories li a:hover{
+    font-weight: 700;
+    color: #46a358;
+}
+.section-product__categories ul:first-of-type{
+    margin-bottom: 36px;
+}
+.section-product__categories ul:last-of-type{
+    margin-bottom: 19px;
+}
+.section-product__categories-price-range{
+    margin-bottom: 46px;
+}
+.section-product__categories-price-range h2{
+    margin-bottom: 20px;
+}
+.section-product__categories-price-range input[type="range"]{
+    margin-bottom: 15px;
+}
+.section-product__categories-price-range p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    margin-bottom: 16px;
+}
+.section-product__categories-price-range a{
+    font-family: var(--font-family, sans-serif);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    border-radius: 6px;
+    background: #46a358;
+    text-decoration: none;
+    padding: 8px 26px;
 }
 
 
@@ -147,18 +273,6 @@ header nav li a{
     min-height: 470px; */
    /*  background-size: cover;
     background-position: center; */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
