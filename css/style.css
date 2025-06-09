@@ -82,6 +82,12 @@
 .justify-content_sp-bn{
     justify-content: space-between;
 }
+.justify-content_and{
+    justify-content: flex-end;
+}
+.flex-wrap-wrap{
+    flex-wrap: wrap;
+}
 /* //////////////////////    section-header    //////////////////////////////////////////////////////////////// */
 header{
     padding-top:25px;
@@ -100,23 +106,32 @@ header nav ul li{
     /* Основное отличие данного свойства по сравнению с display: inline заключается в том, что inline-block позволяет 
     установить ширину и высоту элемента. Кроме того, свойство display: inline не учитывает верхние и нижние поля и отступы, 
     в то время как display: inline-block учитывает их. */
-    margin-right: 50px;
+    margin-right: 10px;
+    min-width: 80px;
+    text-align: center;
+    
 }
-header nav li:last-child{
-    margin-right: 0px;
-}
-header nav ul li:hover::after{
+header nav ul li::after{
     display: block;
     width: 100%;
-    height: 0px;
-    border: 3px solid #46a358;
+    height: 3px;
     content: "";
+}
+header nav ul li:hover::after{
+   background-color: #46a358;
+   font-weight: 700;
+}
+header nav ul li a:hover{
+   font-weight: 700;
+}
 
+header nav ul li:last-child{
+    margin-right: 0px;
 }
 header nav li a{
     font-family: var(--font-family, sans-serif);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     color: #3d3d3d;
 }
@@ -195,9 +210,16 @@ header nav li a{
     padding: 10px 27px;
 }
 /* //////////////////////    section-product    //////////////////////////////////////////////////////////////// */
-
-.section-product__categories{
+.section-product__left-container{
     max-width: 310px;
+}
+.section-product__right-container{
+    max-width: 840px;
+}
+
+/* /////////////////////// */
+.section-product__categories{
+    /* max-width: 310px; */
     /* min-height: 774px; */
     background: #fbfbfb;
     padding: 14px 24px 19px 18px;
@@ -236,7 +258,8 @@ header nav li a{
 .section-product__categories-price-range input[type="range"]{
     margin-bottom: 15px;
 }
-.section-product__categories-price-range p{
+.section-product__categories-price-range span{
+    display: block;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 15px;
@@ -255,6 +278,123 @@ header nav li a{
     text-decoration: none;
     padding: 8px 26px;
 }
+/* ////////////////////// */
+.section-product__sale-baner{
+    min-height: 470px;
+    background:  linear-gradient(180deg, rgba(70, 163, 88, 0.1) 0%, rgba(70, 163, 88, 0.03) 100%),url(../img/image-sale.png) no-repeat;
+    background-position: center bottom;
+    /* mix-blend-mode: multiply; */
+    /* width:370px; 
+    height:370px; */
+}
+.section-product__h2-sale{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 100%;
+    color: #46a358;
+}
+.section-product__span-price-sale{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 70%;
+    text-align: center;
+    color: #3d3d3d;
+}
+/* /////////////////////////////// */
+.section-product__conteiner-product-cards{
+    gap: 70px 41px;
+}
+.section-product__card{
+    max-width: 258px;
+}
+.section-product__card span{
+    display:block;
+}
+.section-product__card-a{
+    background: #fbfbfb; 
+}
+.section-product__card-a img{
+    width: 100%;
+}
+.section-product__card-price-a{
+    text-decoration: none;
+}
+.section-product__card-span-name{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3d3d3d;
+}
+.section-product__card-span-price{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #46a358;
+}
+
+/* .section-product__product-cards a{
+    display: inline-block;
+    max-width: 258px;
+    min-height: 300px;
+    background: #fbfbfb;
+}
+.section-product__product-cards a img{
+   width: 100%;
+} */
+/* mix-blend-mode: multiply; */
+
+/* /////////////// pagination ///////////////////// */
+.section-product__pagination-nav li{
+    margin-right: 10px;
+    
+}
+.section-product__pagination-nav  li:last-child{
+    margin-right: 0px;
+}
+.section-product__pagination-nav li a{
+    display: inline-flex;
+    align-items:center;
+    justify-content: center;
+    text-decoration: none;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #fff;
+    background: #46a358; 
+}
+/* //////////////////////////////// section-information ///////////////////////////////////////////// */
+.section-information{
+    gap:0 28px;
+}
+.section-information__left{
+    flex-grow: 1;
+    flex-basis: 586px;
+    min-height: 250px;
+    background: #fbfbfb;
+}
+.section-information__right{
+    flex-grow: 1;
+    flex-basis: 586px;
+    min-height: 250px;
+    background: #fbfbfb;
+
+}
+
+
+
+
+
+
+
+
 
 
 
