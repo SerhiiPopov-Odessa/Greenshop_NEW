@@ -100,7 +100,7 @@ header{
 header nav ul{
     list-style-type: none;
 }
-header nav ul li{
+header nav > ul > li{
     display:inline-block;
     /* display:inline; */
     /* Основное отличие данного свойства по сравнению с display: inline заключается в том, что inline-block позволяет 
@@ -111,7 +111,7 @@ header nav ul li{
     text-align: center;
     
 }
-header nav ul li::after{
+header nav > ul > li::after{
     display: block;
     width: 100%;
     height: 3px;
@@ -151,6 +151,97 @@ header nav li a{
     background: #46a358;
     padding: 8px 17px;
 }
+/*///////// dropdown v1 /////////////////////*/
+/* .section-header nav ul li.dropdown{
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    text-align: left;
+}
+.section-header nav ul li ul.submenu li{
+    background: #edf6ee;
+    padding: 7px 14px;
+}
+.section-header nav ul li ul.submenu li:hover{
+    background: #1a712a;
+}
+.section-header nav ul li ul.submenu li:hover  a{
+    font-weight: 700;
+    color:white;
+}
+.section-header nav ul li ul.submenu{
+    min-width: 188px;
+    position: absolute;
+    top:49px;
+    left: -55px; 
+    overflow: hidden;
+    height: 0;
+    transition: 0.4s;
+}
+.section-header nav ul li.dropdown:hover .submenu{
+    height: 143px;
+}
+ */
+
+/* //////////////////// dropdown v2 /////////// */
+.section-header .submenu{
+    min-width: 188px;
+    position: absolute;
+    /* top: 48px; */
+    top: 20px;
+    left:-45px;
+    background: #edf6ee;
+    opacity: 0.88;
+    text-align: left;
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    transition: transform .4s linear;
+    visibility: hidden;
+    opacity: 0; 
+    
+}
+.section-header .submenu li{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    text-align: left;
+    padding: 7px 14px;
+}
+
+.section-header .submenu li:hover{
+    background: #1a712a;
+}
+.section-header .submenu li:hover > a{ /* сработает первое сабменю первого уровня вложености */
+    font-weight: 700;
+    color:white;
+}
+.section-header li{
+    position: relative;
+}
+.submenu .submenu{
+    min-width: 178px;
+    position: absolute;
+    top:-90px;
+    left: 100%;
+    transition: transform .4s linear;
+}
+.topmenu li:hover > .submenu{ /* сработает первое сабменю первого уровня вложености */
+    /* opacity: 1; */
+    visibility: visible;
+    opacity: 0.88;
+    transform: rotateX(0deg);
+
+}
+.topmenu li:hover > .submenu li:last-child::after { 
+    content: url('../img/submenu-arrow-right.svg');
+    display: inline-block;
+}
+
+
+
 /* //////////////////////    section-main-banner    //////////////////////////////////////////////////////////////// */
 .section-main-banner{
     background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
@@ -210,6 +301,9 @@ header nav li a{
     padding: 10px 27px;
 }
 /* //////////////////////    section-product    //////////////////////////////////////////////////////////////// */
+.section-product{
+    margin-bottom: 146px;
+}
 .section-product__left-container{
     max-width: 310px;
 }
@@ -305,13 +399,47 @@ header nav li a{
 /* /////////////////////////////// */
 .section-product__conteiner-product-cards{
     gap: 70px 41px;
+    margin-bottom: 90px;
 }
+
 .section-product__card{
     max-width: 258px;
+    position: relative;
+    overflow:hidden;
 }
-.section-product__card span{
-    display:block;
+.section-product__card ul{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:26px;
+    bottom: -35px;
+    transition: bottom 0.5s;
 }
+.section-product__card:hover ul{
+    bottom:35px;
+}
+
+.section-product__discount{
+    position: absolute;
+    top: 14px;
+    left: 0;
+    display: inline-flex;
+    background-color:#46a358;
+    min-width: 80px;
+    min-height: 29px;
+    justify-content: center;
+    align-items:center
+}
+.section-product__discount-h2{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+}
+
+
 .section-product__card-a{
     background: #fbfbfb; 
 }
@@ -327,6 +455,8 @@ header nav li a{
     font-size: 16px;
     line-height: 100%;
     color: #3d3d3d;
+    display: block;
+    margin-bottom: 6px;
 }
 .section-product__card-span-price{
     font-family: var(--font-family);
@@ -334,6 +464,15 @@ header nav li a{
     font-size: 18px;
     line-height: 89%;
     color: #46a358;
+    margin-right: 16px;
+}
+.section-product__card-span-price-old{
+     font-family: var(--font-family);
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 89%;
+     color: #a5a5a5;
+     text-decoration: line-through;
 }
 
 /* .section-product__product-cards a{
@@ -374,18 +513,60 @@ header nav li a{
 .section-information{
     gap:0 28px;
 }
-.section-information__left{
-    flex-grow: 1;
-    flex-basis: 586px;
-    min-height: 250px;
-    background: #fbfbfb;
-}
-.section-information__right{
-    flex-grow: 1;
-    flex-basis: 586px;
-    min-height: 250px;
-    background: #fbfbfb;
 
+.section-information__left, .section-information__right{
+    flex:1 1 586px;
+   /*  flex-grow: 1;
+    flex-basis: 586px; */
+    min-height: 250px;
+    background: #fbfbfb; 
+    padding-top: 37px;
+    text-align: right;
+}
+.section-information__left-img, .section-information__right-img{
+   float: left;  
+   position: relative;
+   bottom: 50px ;
+}
+.section-information__left-h2,.section-information__right-h2{
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 9px;
+    margin-right: 30px;
+}
+.section-information__left-p,.section-information__right-p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #727272;
+    margin-bottom: 25px;
+    margin-right: 30px;
+}
+.section-information__left-a,.section-information__right-a{
+    display: inline-flex;
+    align-items:center;
+    justify-content: center;
+    gap: 2px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: #46a358;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: #fff;
+    padding: 10px 28px;
+    text-align: right;
+    margin-right: 30px;
+}
+.section-information__left-a img,.section-information__right-a img{
+    position: relative;
+    top: 2px;
 }
 
 
