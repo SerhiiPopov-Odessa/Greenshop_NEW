@@ -19,7 +19,12 @@
 </head>
 
 <body>
-    <div class="registration-container">
+    <div class="loader-container">
+    <div class="loader"></div>
+    </div>
+    
+
+    <div class="registration-container active">
 
         <h1 class="registration-container__h1">Login I <span class="registration-container__h1-span">Register</span>
         </h1>
@@ -27,25 +32,27 @@
         <p class="registration-container__text-help">Enter your email and password to register.</p>
 
         <form action="" method="post" name="login">
-            <input class="registration-container__input-name input-style" type="text" name="username" 
+            <input class="registration-container__input-name input-style" type="text" name="username"
                 placeholder="Username">
             <input class="registration-container__input-email input-style" type="email" name="email"
                 placeholder="Enter your email address">
             <input class="registration-container__input-password input-style" type="password" name="password"
                 placeholder="Password">
-            <input class="registration-container__input-password-confirm input-style" type="password" name="password-confirm"
-                placeholder="Confirm Password">
+            <input class="registration-container__input-password-confirm input-style" type="password"
+                name="password-confirm" placeholder="Confirm Password">
             <button class="registration-container__button" type="submit">Register</button>
         </form>
 
         <p class="registration-container__text-messenger">Or register with</p>
 
-        <a href="#" class="registration-container__google registration__link" title="Continue with Google" target="_blank">
+        <a href="#" class="registration-container__google registration__link" title="Continue with Google"
+            target="_blank">
             <img src="img/google.svg" alt="google">
             Continue with Google
         </a>
 
-         <a href="#" class="registration-container__facebook registration__link" title="Continue with Facebook" target="_blank">
+        <a href="#" class="registration-container__facebook registration__link" title="Continue with Facebook"
+            target="_blank">
             <img src="img/facebook.svg" alt="facebook">
             Continue with Facebook
         </a>
