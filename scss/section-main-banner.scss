@@ -1,0 +1,137 @@
+/* ////////////////////          @mixin                   ////////////////////////// */
+
+/* 280, 320, 540px, 768px, 992px, 1200px */
+
+@mixin max-screen($res) {
+    @media screen and (max-width: $res) {
+        @content;
+    }
+}
+
+@mixin min-screen($res) {
+    @media screen and (min-width: $res) {
+        @content;
+    }
+}
+/* //////////////////////    section-main-banner    //////////////////////////////////////////////////////////////// */
+.section-main-banner {
+    background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
+    margin-bottom: 26px;
+
+    @include max-screen(992px) {
+        max-width: 100%;
+    }
+
+    @include min-screen(993px) {
+        flex-wrap: nowrap;
+    }
+
+    &__left-text {
+
+        flex: 1 1 50%;
+
+        @include min-screen(993px) {
+            padding: 0px 0 0 43px;
+        }
+
+
+        @include max-screen(992px) {
+            padding: 0px 0 0 92px;
+        }
+    }
+
+    &__right-picture {
+        flex: 1 1 50%;
+    }
+
+    
+    &__h3 {
+        @include max-screen(992px) {
+            line-height: 130%;
+        }
+
+        font-family: var(--font-family, sans-serif);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 114%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #3d3d3d;
+        margin-bottom: 7px;
+    }
+
+    &__h1 {
+        @include max-screen(1193px) {
+            font-size: 66px;
+        }
+        @include max-screen(1133px) {
+            font-size: 52px;
+        }
+        @include max-screen(998px) {
+            font-size: 42px;
+        }
+
+        font-family: var(--font-family, sans-serif);
+        font-family: 'Cera Pro';
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #3d3d3d;
+        margin-bottom: 5px;
+    }
+
+    &__span {
+        @include max-screen(1193px) {
+            font-size: 66px;
+        }
+        @include max-screen(1133px) {
+            font-size: 52px;
+        }
+
+        @include max-screen(998px) {
+            font-size: 42px;
+        }
+
+        font-family: var(--font-family, sans-serif);
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #46a358;
+    }
+
+    &__p {
+        @include max-screen(1193px) {
+            margin-bottom: 20px;
+        }
+
+        @include max-screen(992px) {
+            font-size: 16px;
+            line-height: 130%;
+            margin-bottom: 20px;
+        }
+
+        font-family: var(--font-family, sans-serif);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 171%;
+        color: #727272;
+        margin-bottom: 44px;
+    }
+
+    &__shop-now {
+        font-family: var(--font-family, sans-serif);
+        display: inline;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 6px;
+        background: #46a358;
+        text-decoration: none;
+        margin-bottom: 85px;
+        padding: 10px 27px;
+    }
+}
