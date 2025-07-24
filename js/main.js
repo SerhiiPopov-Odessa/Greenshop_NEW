@@ -51,38 +51,91 @@ $(function () {
 	})
 })();
 
+/////////////////////////////////////////  owl.carousel.js   ///////////////////////////////////////////////////////////////////
+$(function () {
+	$("owl-carousel").owlСarousel({
+		items: 2, /* Количество блоков на слайде */
+		/* margin:25, */ /* Отступ между слайдами */
+		/* stageClass:'owl-stage-flex', */    /* меняет имя класса <div class="owl-stage"> на owl-stage-flex чтоб в нём прописать 
+											   display flex align-items stretch чтоб растягивался по высоте и item и картинке задать 
+											   100 проц высоты
+											   object-fit:cover; уберает деформацию картинки*/  /* не работает!!! */
+		/* loop:true, */ /* зацыкливаем */
+		/* smartSpeed:800, */ /* плавная прокрутка */
+		/* dotsSpeed:1200, */ /* плавность при клике точкам пагинации */
+		/* center:true, */ /* даёт по центру класс center и его можно стилизовать .owl-item.center.active */
+		nav: true, /* появятся стрелки */
+		/* responsive:{
+			992 : {
+				items:1
+			},
+			1200 : {
+				items:1
+			}
+		} */
+	});
+});
+/* 
+				<div class="owl-carousel owl-theme">
+					<div> </div>
+					<div> </div>
+				</div> 
 
-/* (function () {
-	var button_menu = document.getElementById('button-menu');
-	var button_short_by = document.getElementById('button-short-by');
-	button_menu.addEventListener('click', function (event) {
-		event.preventDefault();
-		var menu = document.getElementById('nav-menu');
-		menu.classList.toggle('is-open');
-	})
-	button_short_by.addEventListener('click', function (event) {
-		event.preventDefault();
-		var menu = document.getElementById('button-short-by');
-		menu.classList.toggle('is-open');
-	})
-})(); */
+			<div class="owl-carousel owl-theme owl-loaded">
+				<div class="owl-stage-outer">
+					<div class="owl-stage">
+						<div class="owl-item">...</div>
+						<div class="owl-item">...</div>
+						<div class="owl-item">...</div>
+					</div>
+				</div>
+				<div class="owl-nav">
+					<div class="owl-prev">prev</div>
+					<div class="owl-next">next</div>
+				</div>
+				<div class="owl-dots">
+					<div class="owl-dot active"><span></span></div>
+					<div class="owl-dot"><span></span></div>
+					<div class="owl-dot"><span></span></div>
+				</div>
+			</div> 
+ */
+/////////////////////////////////////////  slick.js  ///////////////////////////////////////////////////////////////////
+$(function () {
+
+	$('.section-product__slick-slider').slick({
+		arrows: true,
+		dots: true,
+		/* infinite: true, */
+		slidesToShow: 1,
+		/* adaptiveHeight: false , */
+		/* slidesToScroll: 3 */
+
+	});
+
+});
+
+
+
+/////////////////////////////////////////  next   ///////////////////////////////////////////////////////////////////
+
 
 /* window.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.nav-menu'),
-    menuItem = document.querySelectorAll('.nav-menu__list-item'),
-    hamburger = document.querySelector('.hamburger');
+	const menu = document.querySelector('.nav-menu'),
+	menuItem = document.querySelectorAll('.nav-menu__list-item'),
+	hamburger = document.querySelector('.hamburger');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger_active');
-        menu.classList.toggle('nav-menu_active');
-    });
+	hamburger.addEventListener('click', () => {
+		hamburger.classList.toggle('hamburger_active');
+		menu.classList.toggle('nav-menu_active');
+	});
 
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.toggle('hamburger_active');
-            menu.classList.toggle('nav-menu_active');
-        })
-    })
+	menuItem.forEach(item => {
+		item.addEventListener('click', () => {
+			hamburger.classList.toggle('hamburger_active');
+			menu.classList.toggle('nav-menu_active');
+		})
+	})
 }) */
 
 //<nav class="main-section__nav nav-menu">
@@ -91,7 +144,7 @@ $(function () {
 //                    <li class="nav-menu__list-item"><a href="#lessons">Занятия</a></li>
 //                    <li class="nav-menu__list-item"><a href="#">Запись</a></li>
 //                </ul>
-//           </nav> 
+//           </nav>
 //id="about-me"
 
 /* Выражение (function(){})(); в JavaScript представляет собой немедленно вызываемую функциональную инструкцию (IIFE - Immediately Invoked Function Expression). Эта конструкция позволяет создать анонимную функцию и сразу же её выполнить. Она часто используется для создания приватной области видимости (scope) для переменных, предотвращая их загрязнение глобальной области видимости.
