@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* line 1, ../www/Greenshop-copy/src/scss/style.scss */
 * {
   box-sizing: border-box;
 }
@@ -7,7 +6,6 @@
 /* ////////////////////          @mixin                   ////////////////////////// */
 /* 280, 320, 540px, 768px, 992px, 1200px */
 /* ////////////////////          FONTS                   ////////////////////////// */
-/* line 22, ../www/Greenshop-copy/src/scss/style.scss */
 :root {
   --font-family: "Cera Pro", sans-serif;
   --second-family: "hanging_lettersregular", sans-serif;
@@ -66,84 +64,69 @@
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* line 99, ../www/Greenshop-copy/src/scss/style.scss */
 .d-flex {
   display: flex;
 }
 
-/* line 103, ../www/Greenshop-copy/src/scss/style.scss */
 .align-items_center {
   align-items: center;
 }
 
-/* line 107, ../www/Greenshop-copy/src/scss/style.scss */
 .align-items_start {
   align-items: flex-start;
 }
 
-/* line 111, ../www/Greenshop-copy/src/scss/style.scss */
 .justify-content_center {
   justify-content: center;
 }
 
-/* line 115, ../www/Greenshop-copy/src/scss/style.scss */
 .justify-content_sp-bn {
   justify-content: space-between;
 }
 
-/* line 119, ../www/Greenshop-copy/src/scss/style.scss */
 .justify-content_sp-evenly {
   justify-content: space-evenly;
 }
 
-/* line 123, ../www/Greenshop-copy/src/scss/style.scss */
 .justify-content_sp-around {
   justify-content: space-around;
 }
 
-/* line 127, ../www/Greenshop-copy/src/scss/style.scss */
 .justify-content_flex-start {
   justify-content: flex-start;
 }
 
-/* line 131, ../www/Greenshop-copy/src/scss/style.scss */
 .justify-content_and {
   justify-content: flex-end;
 }
 
-/* line 135, ../www/Greenshop-copy/src/scss/style.scss */
 .flex-wrap-wrap {
   flex-wrap: wrap;
 }
 
 /* //////////////////////    section-header    //////////////////////////////////////////////////////////////// */
-/* line 141, ../www/Greenshop-copy/src/scss/style.scss */
 .container {
   max-width: 1200px;
   margin: auto;
 }
 
 @media screen and (max-width: 1248px) {
-  /* line 141, ../www/Greenshop-copy/src/scss/style.scss */
   .container {
     max-width: calc(100vw - 48px);
   }
 }
 
-/* line 151, ../www/Greenshop-copy/src/scss/style.scss */
 header {
   padding-top: 25px;
 }
 
 @media screen and (max-width: 992px) {
-  /* line 156, ../www/Greenshop-copy/src/scss/style.scss */
   .container.section-header {
     max-width: calc(100vw - 48px);
     justify-content: flex-start;
   }
 }
 
-/* line 163, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header {
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
   margin-bottom: 12px;
@@ -152,7 +135,6 @@ header {
   /* //////////////////// finish dropdown v1 /////////// */
 }
 
-/* line 169, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .menu-button {
   position: relative;
   top: 0px;
@@ -166,7 +148,6 @@ header {
   overflow: hidden;
 }
 
-/* line 185, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .menu-button::after {
   content: "";
   position: absolute;
@@ -182,32 +163,26 @@ header {
   text-indent: 0;
 }
 
-/* line 201, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .menu.is-open .topmenu {
   display: block;
 }
 
-/* line 206, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .menu.is-open .menu-button::after {
   background-image: url("../icons/hamburger_active.svg");
 }
 
-/* line 211, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav {
   z-index: 1;
 }
 
-/* line 214, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav .menu-button {
   display: none;
 }
 
 @media screen and (max-width: 992px) {
-  /* line 211, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav {
     order: -1;
   }
-  /* line 219, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav .menu-button {
     display: inline-block;
     margin-right: 24px;
@@ -215,7 +190,6 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 227, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav .topmenu {
     display: none;
     position: absolute;
@@ -228,12 +202,10 @@ header {
   }
 }
 
-/* line 241, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav ul {
   list-style-type: none;
 }
 
-/* line 245, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav ul li a {
   font-family: var(--font-family, sans-serif);
   text-decoration: none;
@@ -242,18 +214,15 @@ header {
   color: #3d3d3d;
 }
 
-/* line 252, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav ul li a:hover {
   font-weight: 700;
 }
 
-/* line 257, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav ul li:last-child {
   margin-right: 0px;
 }
 
 @media screen and (max-width: 992px) {
-  /* line 261, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav ul li.dropdown > a::after {
     content: "";
     display: inline-block;
@@ -267,20 +236,17 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 275, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav ul li.dropdown > a:hover:after {
     background-image: url("../icons/Arrow-Mobile-Down.svg");
   }
 }
 
 @media screen and (max-width: 992px) {
-  /* line 284, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav > ul {
     padding: 24px 0 0 24px;
   }
 }
 
-/* line 290, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header nav > ul > li {
   display: inline-block;
   margin-right: 10px;
@@ -289,7 +255,6 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 290, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav > ul > li {
     display: block;
     margin-right: 0px;
@@ -299,7 +264,6 @@ header {
 }
 
 @media screen and (min-width: 993px) {
-  /* line 307, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav > ul > li::after {
     display: block;
     width: 100%;
@@ -309,14 +273,12 @@ header {
 }
 
 @media screen and (min-width: 993px) {
-  /* line 317, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header nav > ul > li:hover::after {
     background-color: #46a358;
     font-weight: 700;
   }
 }
 
-/* line 329, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .submenu {
   min-width: 188px;
   text-align: left;
@@ -328,7 +290,6 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 332, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu li.d-flex.align-items_center.justify-content_sp-bn {
     flex-direction: column;
     justify-content: flex-start;
@@ -337,7 +298,6 @@ header {
 }
 
 @media screen and (min-width: 993px) {
-  /* line 329, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu {
     position: absolute;
     left: -45px;
@@ -347,20 +307,17 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 329, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu {
     display: none;
   }
 }
 
 @media screen and (max-width: 992px) {
-  /* line 329, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu {
     padding-top: 16px;
   }
 }
 
-/* line 365, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .submenu .submenu {
   min-width: 178px;
   /* position: absolute; */
@@ -368,7 +325,6 @@ header {
 }
 
 @media screen and (min-width: 993px) {
-  /* line 365, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu .submenu {
     position: absolute;
     top: -400%;
@@ -377,14 +333,12 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 365, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu .submenu {
     top: 0px;
     left: 0px;
   }
 }
 
-/* line 384, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .submenu li {
   background: #edf6ee;
   font-family: var(--font-family);
@@ -396,56 +350,47 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 394, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu li .submenu-arrow-right-svg {
     display: none;
   }
 }
 
 @media screen and (min-width: 993px) {
-  /* line 399, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu li:hover {
     background: #1a712a;
   }
 }
 
-/* line 405, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .submenu li:hover .submenu-arrow-right-svg {
   transform: rotate(180deg);
   fill: #fff;
 }
 
-/* line 409, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .submenu li:hover .submenu-arrow-right-svg path {
   fill: #fff;
 }
 
-/* line 414, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .submenu li:hover > a {
   /* сработает  первого уровня вложености */
   font-weight: 700;
 }
 
 @media screen and (min-width: 993px) {
-  /* line 414, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .submenu li:hover > a {
     color: white;
   }
 }
 
-/* line 428, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .topmenu li {
   position: relative;
 }
 
-/* line 431, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header .topmenu li:hover > .submenu {
   /* сработает первое сабменю первого уровня вложености */
   transform: rotateX(0deg);
 }
 
 @media screen and (min-width: 993px) {
-  /* line 431, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .topmenu li:hover > .submenu {
     visibility: visible;
     opacity: 0.88;
@@ -453,13 +398,11 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 431, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header .topmenu li:hover > .submenu {
     display: block;
   }
 }
 
-/* line 450, ../www/Greenshop-copy/src/scss/style.scss */
 .section-header__login {
   font-family: var(--font-family, sans-serif);
   font-weight: 500;
@@ -473,7 +416,6 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 450, ../www/Greenshop-copy/src/scss/style.scss */
   .section-header__login {
     margin-left: auto;
   }
@@ -516,51 +458,43 @@ header {
 /* ////////////////////          @mixin                   ////////////////////////// */
 /* 280, 320, 540px, 768px, 992px, 1200px */
 /* //////////////////////    section-main-banner    //////////////////////////////////////////////////////////////// */
-/* line 17, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner {
   background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
   margin-bottom: 26px;
 }
 
 @media screen and (max-width: 992px) {
-  /* line 17, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner {
     max-width: 100%;
   }
 }
 
 @media screen and (min-width: 993px) {
-  /* line 17, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner {
     flex-wrap: nowrap;
   }
 }
 
-/* line 29, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__left-text {
   flex: 1 1 50%;
 }
 
 @media screen and (min-width: 993px) {
-  /* line 29, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__left-text {
     padding: 0px 0 0 43px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  /* line 29, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__left-text {
     padding: 0px 0 0 92px;
   }
 }
 
-/* line 43, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__right-picture {
   flex: 1 1 50%;
 }
 
-/* line 48, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__h3 {
   font-family: var(--font-family, sans-serif);
   font-weight: 500;
@@ -573,13 +507,11 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 48, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__h3 {
     line-height: 130%;
   }
 }
 
-/* line 63, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__h1 {
   font-family: var(--font-family, sans-serif);
   font-family: 'Cera Pro';
@@ -592,27 +524,23 @@ header {
 }
 
 @media screen and (max-width: 1193px) {
-  /* line 63, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__h1 {
     font-size: 66px;
   }
 }
 
 @media screen and (max-width: 1133px) {
-  /* line 63, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__h1 {
     font-size: 52px;
   }
 }
 
 @media screen and (max-width: 998px) {
-  /* line 63, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__h1 {
     font-size: 42px;
   }
 }
 
-/* line 84, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__span {
   font-family: var(--font-family, sans-serif);
   font-weight: 900;
@@ -623,27 +551,23 @@ header {
 }
 
 @media screen and (max-width: 1193px) {
-  /* line 84, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__span {
     font-size: 66px;
   }
 }
 
 @media screen and (max-width: 1133px) {
-  /* line 84, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__span {
     font-size: 52px;
   }
 }
 
 @media screen and (max-width: 998px) {
-  /* line 84, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__span {
     font-size: 42px;
   }
 }
 
-/* line 104, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__p {
   font-family: var(--font-family, sans-serif);
   font-weight: 400;
@@ -654,14 +578,12 @@ header {
 }
 
 @media screen and (max-width: 1193px) {
-  /* line 104, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__p {
     margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  /* line 104, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
   .section-main-banner__p {
     font-size: 16px;
     line-height: 130%;
@@ -669,7 +591,6 @@ header {
   }
 }
 
-/* line 123, ../www/Greenshop-copy/src/scss/section-main-banner.scss */
 .section-main-banner__shop-now {
   font-family: var(--font-family, sans-serif);
   display: inline;
@@ -686,7 +607,6 @@ header {
 }
 
 /* //////////////////////    section-product    //////////////////////////////////////////////////////////////// */
-/* line 508, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product {
   margin-bottom: 146px;
   /* 
@@ -703,7 +623,6 @@ header {
 /* .section-product__container-categories-sale-baner {
     display: none;
 } */
-/* line 525, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by {
   align-items: center;
   margin-bottom: 31px;
@@ -711,20 +630,17 @@ header {
   order: 0;
 }
 
-/* line 531, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by .button-short-by {
   display: none;
 }
 
 @media screen and (max-width: 992px) {
-  /* line 536, ../www/Greenshop-copy/src/scss/style.scss */
   .section-product__short-by .button-short-by {
     display: inline-block;
     margin-right: 24px;
   }
 }
 
-/* line 542, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by .button-short-by {
   position: relative;
   top: 0px;
@@ -739,7 +655,6 @@ header {
         overflow: hidden; //обрезает текст вокруг кнопки */
 }
 
-/* line 560, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by .button-short-by::after {
   content: "";
   position: absolute;
@@ -755,14 +670,12 @@ header {
   text-indent: 0;
 }
 
-/* line 578, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul ul {
   display: inline-flex;
   align-items: flex-start;
   justify-content: center;
 }
 
-/* line 583, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul ul li {
   font-family: var(--font-family);
   font-weight: 400;
@@ -774,7 +687,6 @@ header {
   min-height: 26px;
 }
 
-/* line 593, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul ul li:hover {
   font-family: var(--font-family);
   font-weight: 700;
@@ -784,7 +696,6 @@ header {
   padding-bottom: 7px;
 }
 
-/* line 608, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul > ul > li:first-child::after {
   display: block;
   width: 66px;
@@ -792,7 +703,6 @@ header {
   content: "";
 }
 
-/* line 615, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul > ul > li:nth-child(2)::after {
   display: block;
   width: 90px;
@@ -800,7 +710,6 @@ header {
   content: "";
 }
 
-/* line 622, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul > ul > li:nth-child(3)::after {
   display: block;
   width: 30px;
@@ -808,25 +717,21 @@ header {
   content: "";
 }
 
-/* line 629, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-ul > ul > li:hover::after {
   background-color: #46a358;
   font-weight: 700;
 }
 
-/* line 637, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-p p {
   display: inline-block;
   margin-right: 8px;
 }
 
-/* line 641, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-p p:last-child {
   position: relative;
   padding-right: 5px;
 }
 
-/* line 646, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__short-by-p p:last-child::after {
   content: '';
   position: absolute;
@@ -842,31 +747,26 @@ header {
 
 /* ///////////////    section-product__categories     //////// */
 @media screen and (max-width: 992px) {
-  /* line 663, ../www/Greenshop-copy/src/scss/style.scss */
   .section-product__container-categories-sale-baner {
     display: none;
   }
 }
 
-/* line 669, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__container-categories-sale-baner.is-open {
   display: block;
 }
 
-/* line 674, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__container-categories-sale-baner {
   flex-basis: 20%;
   order: 1;
 }
 
 @media screen and (max-width: 1034px) {
-  /* line 674, ../www/Greenshop-copy/src/scss/style.scss */
   .section-product__container-categories-sale-baner {
     flex-basis: 25%;
   }
 }
 
-/* line 684, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories {
   /* max-width: 310px; */
   /* min-height: 774px; */
@@ -874,7 +774,6 @@ header {
   padding: 14px 24px 19px 18px;
 }
 
-/* line 690, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories h2 {
   font-family: var(--font-family, sans-serif);
   font-weight: 700;
@@ -883,7 +782,6 @@ header {
   color: #3d3d3d;
 }
 
-/* line 698, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories li a {
   font-family: var(--font-family);
   font-weight: 400;
@@ -893,33 +791,27 @@ header {
   text-decoration: none;
 }
 
-/* line 706, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories li a:hover {
   font-weight: 700;
   color: #46a358;
 }
 
-/* line 712, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories ul:first-of-type {
   margin-bottom: 36px;
 }
 
-/* line 716, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories ul:last-of-type {
   margin-bottom: 19px;
 }
 
-/* line 721, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories-range {
   margin-bottom: 46px;
 }
 
-/* line 724, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories-range-price {
   margin-bottom: 16px;
 }
 
-/* line 727, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories-range-price span {
   font-family: var(--font-family);
   font-weight: 700;
@@ -928,18 +820,15 @@ header {
   color: #46a358;
 }
 
-/* line 735, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories-range-price span.section-product__categories-range-price-span {
   font-weight: 400;
   color: #3d3d3d;
 }
 
-/* line 741, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories-range h2 {
   margin-bottom: 20px;
 }
 
-/* line 745, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__categories-range a {
   font-family: var(--font-family, sans-serif);
   font-weight: 700;
@@ -952,14 +841,12 @@ header {
   padding: 8px 26px;
 }
 
-/* line 758, ../www/Greenshop-copy/src/scss/style.scss */
 .slider-snap__conteiner {
   margin-bottom: 25px;
   max-width: 209px;
 }
 
 /* ///////////////     sale-baner        /////// */
-/* line 766, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__sale-baner {
   min-height: 470px;
   background: linear-gradient(180deg, rgba(70, 163, 88, 0.1) 0%, rgba(70, 163, 88, 0.03) 100%), url(../img/image-sale.png) no-repeat;
@@ -968,7 +855,6 @@ header {
   text-align: center;
 }
 
-/* line 774, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__h2-sale {
   font-family: var(--second-family);
   font-weight: 400;
@@ -978,7 +864,6 @@ header {
   margin-bottom: 15px;
 }
 
-/* line 783, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__span-price-sale {
   font-family: var(--font-family);
   font-weight: 700;
@@ -988,13 +873,11 @@ header {
 }
 
 /* ///////////////////////////   conteiner-product-cards    ////////////////////////////////// */
-/* line 796, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-prev:before {
   font-size: 40px;
   color: #60e077;
 }
 
-/* line 801, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-prev {
   left: 30px;
   z-index: 1;
@@ -1002,13 +885,11 @@ header {
   height: 40px;
 }
 
-/* line 808, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-next:before {
   font-size: 40px;
   color: #60e077;
 }
 
-/* line 813, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-next {
   right: 30px;
   z-index: 1;
@@ -1016,7 +897,6 @@ header {
   height: 40px;
 }
 
-/* line 820, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-dots {
   position: absolute;
   bottom: -100px;
@@ -1025,19 +905,16 @@ header {
   text-align: center;
 }
 
-/* line 828, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-dots li {
   width: 35px;
   height: 35px;
   margin-right: 10px;
 }
 
-/* line 834, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-dots li button:before {
   display: none;
 }
 
-/* line 837, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-dots li button {
   font-family: var(--font-family);
   font-weight: 300;
@@ -1050,19 +927,16 @@ header {
   height: 100%;
 }
 
-/* line 848, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-dots li button:hover {
   background: #46a358;
   color: white;
 }
 
-/* line 852, ../www/Greenshop-copy/src/scss/style.scss */
 .slick-dots li.slick-active button {
   background: #46a358;
   color: white;
 }
 
-/* line 859, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__conteiner-product-cards {
   margin-bottom: 90px;
   max-width: 80%;
@@ -1070,13 +944,11 @@ header {
   order: 2;
 }
 
-/* line 861, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__conteiner-product-cards .section-product__slick-slider {
   max-width: 100%;
 }
 
 @media screen and (max-width: 1034px) {
-  /* line 859, ../www/Greenshop-copy/src/scss/style.scss */
   .section-product__conteiner-product-cards {
     /* flex-basis: 75%; */
     max-width: 75%;
@@ -1084,26 +956,22 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 859, ../www/Greenshop-copy/src/scss/style.scss */
   .section-product__conteiner-product-cards {
     /* flex-basis: 100%; */
     max-width: 100%;
   }
 }
 
-/* line 886, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__conteiner-product-cards.is-open {
   /* flex-basis: 75%; */
   max-width: 75%;
 }
 
-/* line 892, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card {
   position: relative;
   overflow: hidden;
 }
 
-/* line 896, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card ul {
   position: absolute;
   width: 100%;
@@ -1114,12 +982,10 @@ header {
   transition: bottom 0.5s;
 }
 
-/* line 906, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card ul li a:hover svg path {
   fill: #46A358;
 }
 
-/* line 910, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card:hover::before {
   content: '';
   position: absolute;
@@ -1130,12 +996,10 @@ header {
   right: 0px;
 }
 
-/* line 920, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card:hover ul {
   bottom: 50px;
 }
 
-/* line 925, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card-img {
   /* min-width: 258px; */
   min-height: 300px;
@@ -1146,7 +1010,6 @@ header {
   margin-bottom: 12px;
 }
 
-/* line 935, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__discount {
   position: absolute;
   top: 14px;
@@ -1159,7 +1022,6 @@ header {
   align-items: center;
 }
 
-/* line 947, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__discount-h2 {
   font-family: var(--font-family);
   font-weight: 500;
@@ -1168,17 +1030,14 @@ header {
   color: #fff;
 }
 
-/* line 955, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card-a-img img {
   width: 100%;
 }
 
-/* line 959, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card-price-a {
   text-decoration: none;
 }
 
-/* line 963, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card-span-name {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1189,7 +1048,6 @@ header {
   margin-bottom: 6px;
 }
 
-/* line 973, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card-span-price {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1199,7 +1057,6 @@ header {
   margin-right: 16px;
 }
 
-/* line 982, ../www/Greenshop-copy/src/scss/style.scss */
 .section-product__card-span-price-old {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1252,13 +1109,11 @@ header {
 
 } */
 /* //////////////////////////////// section-information ///////////////////////////////////////////// */
-/* line 1036, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information {
   gap: 0 28px;
   margin-bottom: 138px;
 }
 
-/* line 1040, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left, .section-information__right {
   flex: 1;
   /* flex: 1 1 586px; */
@@ -1270,19 +1125,16 @@ header {
   text-align: right;
 }
 
-/* line 1052, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left-img, .section-information__right-img {
   flex: 1;
   position: relative;
   bottom: 50px;
 }
 
-/* line 1060, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left-container-text, .section-information__right-container-text {
   flex: 1;
 }
 
-/* line 1066, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left-h2, .section-information__right-h2 {
   font-family: var(--font-family);
   font-weight: 900;
@@ -1294,7 +1146,6 @@ header {
   margin-right: 30px;
 }
 
-/* line 1078, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left-p, .section-information__right-p {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1305,7 +1156,6 @@ header {
   margin-right: 30px;
 }
 
-/* line 1089, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left-a, .section-information__right-a {
   display: inline-flex;
   align-items: center;
@@ -1324,7 +1174,6 @@ header {
   margin-right: 30px;
 }
 
-/* line 1108, ../www/Greenshop-copy/src/scss/style.scss */
 .section-information__left-a img,
 .section-information__right-a img {
   position: relative;
@@ -1332,12 +1181,10 @@ header {
 }
 
 /* //////////////////////////////// section-blog ///////////////////////////////////////////// */
-/* line 1117, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog {
   margin-bottom: 100px;
 }
 
-/* line 1120, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog > H2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1348,7 +1195,6 @@ header {
   margin-bottom: 15px;
 }
 
-/* line 1130, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog > H3 {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1359,26 +1205,22 @@ header {
   margin-bottom: 35px;
 }
 
-/* line 1141, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product {
   flex-basis: 268px;
   background: #fbfbfb;
   min-height: 362px;
 }
 
-/* line 1146, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product img {
   width: 100%;
   min-height: 195px;
   margin-bottom: 9px;
 }
 
-/* line 1153, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a {
   text-decoration: none;
 }
 
-/* line 1156, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a span {
   display: inline-block;
   font-family: var(--font-family);
@@ -1389,7 +1231,6 @@ header {
   margin-bottom: 4px;
 }
 
-/* line 1166, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a h3 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1399,7 +1240,6 @@ header {
   margin-bottom: 4px;
 }
 
-/* line 1175, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a p {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1408,7 +1248,6 @@ header {
   color: #727272;
 }
 
-/* line 1184, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a-a {
   font-family: var(--font-family);
   font-weight: 500;
@@ -1421,52 +1260,43 @@ header {
   align-items: center;
 }
 
-/* line 1195, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a-a svg {
   margin-left: 3px;
 }
 
-/* line 1199, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a-a:hover {
   color: #46a358;
 }
 
-/* line 1202, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a-a:hover svg path {
   fill: #46a358;
 }
 
-/* line 1208, ../www/Greenshop-copy/src/scss/style.scss */
 .section-blog__product-a-conteiner {
   padding-left: 13px;
   padding-right: 13px;
 }
 
 /* //////////////////////////////// section-footer ///////////////////////////////////////////// */
-/* line 1215, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__container-advertising-info {
   padding: 30px 25px 25px 25px;
   background: #fbfbfb;
   min-height: 250px;
 }
 
-/* line 1221, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__advertising-info {
   position: relative;
   flex-basis: 204px;
 }
 
-/* line 1225, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__advertising-info a {
   text-decoration: none;
 }
 
-/* line 1229, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__advertising-info img {
   margin-bottom: 17px;
 }
 
-/* line 1233, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__advertising-info h2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1476,7 +1306,6 @@ header {
   margin-bottom: 9px;
 }
 
-/* line 1242, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__advertising-info p {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1485,7 +1314,6 @@ header {
   color: #727272;
 }
 
-/* line 1250, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__advertising-info:nth-child(-n+2)::before {
   content: '';
   position: absolute;
@@ -1497,13 +1325,11 @@ header {
   right: -118px;
 }
 
-/* line 1262, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__emailform {
   flex-basis: 354px;
   padding-top: 30px;
 }
 
-/* line 1266, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__emailform > h2 {
   text-align: left;
   font-family: var(--font-family);
@@ -1514,7 +1340,6 @@ header {
   margin-bottom: 18px;
 }
 
-/* line 1276, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__emailform > p {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1523,7 +1348,6 @@ header {
   color: #727272;
 }
 
-/* line 1285, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__emailform-input-email {
   border: none;
   border-radius: 6px 0 0 6px;
@@ -1535,7 +1359,6 @@ header {
   padding: 12px 11px 12px 11px;
 }
 
-/* line 1296, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__emailform-btn {
   border: none;
   border-radius: 0 6px 6px 0;
@@ -1550,25 +1373,21 @@ header {
   padding: 12px 25px 12px 26px;
 }
 
-/* line 1310, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__emailform-form {
   margin-bottom: 17px;
 }
 
-/* line 1314, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact {
   border: none;
   /* box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.25); */
   background: linear-gradient(to right, #aaffbe 0%, #60e077 100%);
 }
 
-/* line 1319, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address {
   min-height: 88px;
   padding-left: 23px;
 }
 
-/* line 1324, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact a {
   text-decoration: none;
   font-family: var(--font-family);
@@ -1578,12 +1397,10 @@ header {
   color: #3d3d3d;
 }
 
-/* line 1333, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address a:first-child {
   margin-right: 116px;
 }
 
-/* line 1337, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address span {
   position: relative;
   text-decoration: none;
@@ -1595,18 +1412,15 @@ header {
   margin-right: 90px;
 }
 
-/* line 1348, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address a:nth-child(3) {
   position: relative;
   margin-right: 101px;
 }
 
-/* line 1353, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address a:nth-child(4) {
   position: relative;
 }
 
-/* line 1357, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address span::before {
   content: '';
   position: absolute;
@@ -1619,7 +1433,6 @@ header {
   right: 172px;
 }
 
-/* line 1369, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address a:nth-child(3)::before {
   content: '';
   position: absolute;
@@ -1632,7 +1445,6 @@ header {
   right: 169px;
 }
 
-/* line 1381, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__contact address a:nth-child(4)::before {
   content: '';
   position: absolute;
@@ -1645,7 +1457,6 @@ header {
   right: 118px;
 }
 
-/* line 1394, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__links {
   background: #fbfbfb;
   border-bottom: 1px solid rgba(70, 163, 88, 0.2);
@@ -1656,7 +1467,6 @@ header {
   margin-bottom: 7px;
 }
 
-/* line 1404, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__links-block > li:first-child {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1666,7 +1476,6 @@ header {
   margin-bottom: 8px;
 }
 
-/* line 1413, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__links-block li a {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1676,14 +1485,12 @@ header {
   text-decoration: none;
 }
 
-/* line 1423, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__links-block-socialmedia {
   display: inline-flex;
   gap: 10px;
   margin-bottom: 33px;
 }
 
-/* line 1427, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__links-block-socialmedia li a {
   display: inline-flex;
   align-items: center;
@@ -1695,7 +1502,6 @@ header {
   min-height: 30px;
 }
 
-/* line 1441, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__links-block-socialmedia-we-accept {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1705,7 +1511,6 @@ header {
   margin-bottom: 13px;
 }
 
-/* line 1450, ../www/Greenshop-copy/src/scss/style.scss */
 .section-footer__copyright {
   text-align: center;
   font-family: var(--font-family);
@@ -1717,7 +1522,6 @@ header {
 
 /*///////////////////////////////////////////// registration preloader //////////////////////////////////////////*/
 /* /////////   preloader   ///////// */
-/* line 1463, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container {
   animation: showDiv 3s forwards;
 }
@@ -1734,7 +1538,6 @@ header {
   }
 }
 
-/* line 1482, ../www/Greenshop-copy/src/scss/style.scss */
 .loader-container {
   position: absolute;
   top: 50%;
@@ -1743,7 +1546,6 @@ header {
   animation: showDiv2 3s forwards;
 }
 
-/* line 1490, ../www/Greenshop-copy/src/scss/style.scss */
 .loader {
   width: 120px;
   height: 20px;
@@ -1771,7 +1573,6 @@ header {
 }
 
 /*///////////////////////////////////////////// registration //////////////////////////////////////////*/
-/* line 1522, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container {
   max-width: 500px;
   border: solid 1px silver;
@@ -1784,7 +1585,6 @@ header {
   transform: translate(-50%, -50%);
 }
 
-/* line 1534, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__h1 {
   text-align: center;
   font-weight: 500;
@@ -1794,12 +1594,10 @@ header {
   margin-bottom: 40px;
 }
 
-/* line 1543, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__h1-span {
   color: #46a358;
 }
 
-/* line 1547, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__text-help {
   font-weight: 400;
   font-size: 13px;
@@ -1808,27 +1606,22 @@ header {
   margin-bottom: 14px;
 }
 
-/* line 1555, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__input-name {
   margin-bottom: 16px;
 }
 
-/* line 1559, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__input-email {
   margin-bottom: 16px;
 }
 
-/* line 1563, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__input-password {
   margin-bottom: 16px;
 }
 
-/* line 1567, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__input-password-confirm {
   margin-bottom: 41px;
 }
 
-/* line 1571, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__button {
   width: 100%;
   text-align: center;
@@ -1840,23 +1633,19 @@ header {
   border: none;
 }
 
-/* line 1582, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__text-messenger {
   margin-bottom: 27px;
   text-align: center;
 }
 
-/* line 1587, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__google {
   margin-bottom: 15px;
 }
 
-/* line 1591, ../www/Greenshop-copy/src/scss/style.scss */
 .registration-container__facebook {
   margin-bottom: 50px;
 }
 
-/* line 1596, ../www/Greenshop-copy/src/scss/style.scss */
 .input-style {
   width: 100%;
   border: 1px solid #eaeaea;
@@ -1864,7 +1653,6 @@ header {
   padding: 12px 14px;
 }
 
-/* line 1603, ../www/Greenshop-copy/src/scss/style.scss */
 .registration__link {
   width: 100%;
   display: flex;
@@ -1882,6 +1670,12 @@ header {
   text-decoration: none;
 }
 
+/* ////////////////////////////////////////   #accordion     //////////////////////////////////////////// */
+#accordion {
+  display: none;
+}
+
+/* ////////////////////////////////////////   #accordion     //////////////////////////////////////////// */
 /* ////////////////////////////////////////   bool     //////////////////////////////////////////// */
 /* bool {
     width: 70px;
@@ -1937,5 +1731,3 @@ header {
     animation: bool 5s infinite;
 }
  */
-
-/*# sourceMappingURL=style.css.map */
